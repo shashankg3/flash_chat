@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flash_chat/components/rounded_button.dart';
 import 'package:flash_chat/constants.dart';
 import 'package:flash_chat/screens/chat_screen.dart';
+import 'package:flash_chat/screens/forgot_password_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
@@ -123,6 +124,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     ));
                   }
                 },
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, ForgotPasswordScreen.id);
+                },
+                child: Text('Forgot Password?'),
               ),
             ],
           ),
